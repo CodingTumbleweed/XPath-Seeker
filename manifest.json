@@ -1,0 +1,30 @@
+{
+  "name" : "XPath Seeker",
+  "version" : "1.0.0",
+  "manifest_version": 2,
+  "description" : "Gets Xpath of selected DOM element",
+  "default_locale": "en",
+  "icons" : {
+    "16" : "images/icon16.png",
+    "48" : "images/icon48.png",
+    "128" : "images/icon128.png"
+  },
+  "background" : { 
+	"scripts": ["src/background.js"],
+	"persistent": false
+  },
+  "content_scripts" : [
+	{ 
+		"matches": ["<all_urls>"],
+		"js": ["src/contentScript.js"]
+	}
+  ],
+  "permissions" : [
+    "contextMenus"
+   ],
+  "minimum_chrome_version" : "6.0.0.0",
+  "browser_action":{
+	"default_icon": "images/icon16.png",
+	"default_title": "XPath Seeker"
+  }
+}
