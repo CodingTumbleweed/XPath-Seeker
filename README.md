@@ -1,12 +1,12 @@
 # Introduction
 
-[![XPath: Seeker](https://img.shields.io/badge/XPath-Seeker-orange.svg)]
+[![License: MIT](https://img.shields.io/badge/XPath-Seeker-orange.svg)](https://github.com/CodingTumbleweed/XPath-Seeker)
 
-XPath Seeker is a chrome extension to get XPath of any element on page.
+XPath Seeker is a chrome extension to find the XPath of any DOM element on page.
 
 # Install
 
-To install the extension, Go to 'More Tools -> Extensions' and  click 'Developer mode' checkbox. Now click 'Load unpacked extension...' button and browse to project root folder and select it. Now you can see 'Get XPath' menu item in your context menu. Enjoy!
+To install the extension, Go to 'More Tools -> Extensions' and  click on 'Developer mode' checkbox. Now click on 'Load unpacked extension...' button, browse to project root folder and select it. You will see 'Get XPath' menu item in your context menu which can be used for finding XPath of desired element. Enjoy!
 
 # License
 
