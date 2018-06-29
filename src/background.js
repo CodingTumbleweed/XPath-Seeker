@@ -22,6 +22,7 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
  */
 chrome.runtime.onInstalled.addListener(function() {
     createMenuItem(XpathmenuItemId, "Get XPath");
+	notifyUser();
 });
 
 
@@ -39,6 +40,39 @@ function createMenuItem(itemId, title) {
         "type": "normal",
         "contexts": ["all"]
     });
+}
+
+/**
+* Notifies User to reload existing pages on install
+**/
+function notifyUser(){
+	var notificationId = "xpath-seeker-notify";
+	var notificationTitle = "XPath Seeker Notification Alert!";
+	var message = "Existing pages need to be reloaded for extension to work on these pages";
+	var options = {
+		type: "basic",
+		title: notificationTitle,
+		message: message,
+		iconUrl: 'images/icon48.png',
+		priority: 2,
+		requireInteraction: true
+	}
+		
+	// check if the browser supports notifications
+	if (window.Notification) {
+		// Get notification permission
+		chrome.notifications.getPermissionLevel(function (permission) {
+			if (permission === "granted") {
+				chrome.notifications.create(notificationId, options);
+			}
+			else {
+				alert(message);
+			}
+		});
+	}
+	else {
+		alert(message);
+	}
 }
 
 /**
