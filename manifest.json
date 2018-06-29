@@ -1,8 +1,10 @@
 {
   "name" : "XPath Seeker",
+  "short_name": "XPath Seeker",
   "version" : "1.0.0",
   "manifest_version": 2,
-  "description" : "Gets Xpath of selected DOM element",
+  "description" : "Gets XPath of selected DOM element",
+  "author": "CodingTumbleweed",
   "default_locale": "en",
   "icons" : {
     "16" : "images/icon16.png",
