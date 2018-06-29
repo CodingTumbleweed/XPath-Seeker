@@ -20,11 +20,15 @@
 	}
   ],
   "permissions" : [
-    "contextMenus"
+    "contextMenus",
+	"notifications"
    ],
   "minimum_chrome_version" : "6.0.0.0",
   "browser_action":{
 	"default_icon": "images/icon16.png",
 	"default_title": "XPath Seeker"
-  }
+  },
+  "web_accessible_resources": [
+    "images/icon48.png"
+  ]
 }
